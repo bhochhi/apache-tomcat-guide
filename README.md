@@ -17,7 +17,7 @@ We wanted to integrate LDAP with Tomcat to provide authentication mechanism for 
 
 [JDNIRealms](https://tomcat.apache.org/tomcat-7.0-doc/realm-howto.html#JNDIRealm) is the built-in component we need to use for integration LDAP. Follow the steps:
 
-1. Open your CATALINA_HOME/conf/server.xml file, within <Host> element, comment out the current <realm>(by default `UserDatabaseRealm`) within `LockOutRealm` realm. If you want you can comment out the whole realms.
+1. Open your CATALINA_HOME/conf/server.xml file, within `<Host>` element, comment out the current `<realm>`(by default `UserDatabaseRealm`) within `LockOutRealm` realm. If you want you can comment out the whole realms.
 2. Add the following realm to replace what has just been commented above
   ```xml
   <Realm 	className="org.apache.catalina.realm.JNDIRealm" 
