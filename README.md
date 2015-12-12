@@ -21,21 +21,22 @@ We wanted to integrate LDAP with Tomcat to provide authentication mechanism for 
 2. Add the following realm to replace what has just been commented above
 
     ```xml
-    <Realm  	className="org.apache.catalina.realm.JNDIRealm" 
-		debug="99"
-		connectionURL="ldap://ldap.yourdomain.com" 
-		authentication="simple"
-		referrals="follow"
-		connectionName="ldapquery"
-		connectionPassword="password" 
-		userSearch="(sAMAccountName={0})"
-		userBase="dc=youdomain,dc=com" 
-		userSubtree="true" 
-		userRoleName="memberOf"
-		roleBase="ou=group,dc=yourdomain,dc=com"
-		roleSearch="(member={0})"
-		roleSubtree="true"
-		roleName="CN" />
+    <Realm  	
+    	className="org.apache.catalina.realm.JNDIRealm" 
+	debug="99"
+	connectionURL="ldap://ldap.yourdomain.com" 
+	authentication="simple"
+	referrals="follow"
+	connectionName="ldapquery"
+	connectionPassword="password" 
+	userSearch="(sAMAccountName={0})"
+	userBase="dc=youdomain,dc=com" 
+	userSubtree="true" 
+	userRoleName="memberOf"
+	roleBase="ou=group,dc=yourdomain,dc=com"
+	roleSearch="(member={0})"
+	roleSubtree="true"
+	roleName="CN" />
   ```
   
   **Make sure you know all properties of LDAP protocal their values are set correctly according to your ldap settings.
