@@ -19,8 +19,8 @@ We wanted to integrate LDAP with Tomcat to provide authentication mechanism for 
 
 1. Open your CATALINA_HOME/conf/server.xml file, within `<Host>` element, comment out the current `<realm>`(by default `UserDatabaseRealm`) within `LockOutRealm` realm. If you want you can comment out the whole realms.
 2. Add the following realm to replace what has just been commented above
-  ```xml
-  <Realm 	className="org.apache.catalina.realm.JNDIRealm" 
+    ```xml
+    <Realm 	className="org.apache.catalina.realm.JNDIRealm" 
 				debug="99"
 				connectionURL="ldap://ldap.yourdomain.com" 
 				authentication="simple"
