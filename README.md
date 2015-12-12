@@ -19,23 +19,25 @@ We wanted to integrate LDAP with Tomcat to provide authentication mechanism for 
 
 1. Open your CATALINA_HOME/conf/server.xml file, within `<Host>` element, comment out the current `<realm>`(by default `UserDatabaseRealm`) within `LockOutRealm` realm. If you want you can comment out the whole realms.
 2. Add the following realm to replace what has just been commented above
+
     ```xml
-    <Realm 	className="org.apache.catalina.realm.JNDIRealm" 
-				debug="99"
-				connectionURL="ldap://ldap.yourdomain.com" 
-				authentication="simple"
-				referrals="follow"
-				connectionName="ldapquery"
-				connectionPassword="password" 
-				userSearch="(sAMAccountName={0})"
-				userBase="dc=youdomain,dc=com" 
-				userSubtree="true" 
-				userRoleName="memberOf"
-				roleBase="ou=group,dc=yourdomain,dc=com"
-				roleSearch="(member={0})"
-				roleSubtree="true"
-				roleName="CN" />
+    <Realm  	className="org.apache.catalina.realm.JNDIRealm" 
+		debug="99"
+		connectionURL="ldap://ldap.yourdomain.com" 
+		authentication="simple"
+		referrals="follow"
+		connectionName="ldapquery"
+		connectionPassword="password" 
+		userSearch="(sAMAccountName={0})"
+		userBase="dc=youdomain,dc=com" 
+		userSubtree="true" 
+		userRoleName="memberOf"
+		roleBase="ou=group,dc=yourdomain,dc=com"
+		roleSearch="(member={0})"
+		roleSubtree="true"
+		roleName="CN" />
   ```
+  
   **Make sure you know all properties of LDAP protocal their values are set correctly according to your ldap settings.
 3. That's it, here on if any of our web application need authentication, just use basic authentication login-config, which should prompt for username/password and if those credentials are entered correctly, your container should verify the user.
 4. Remember, this is just authentication parts that your container will handle for you. if you need configuration authorization for your resources, you need to configuration those in your web description file, web.xml.
