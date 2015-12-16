@@ -9,7 +9,8 @@ I want to document this to keep the good understanding of
 - How tomcat versioning syncs with java version and other specifications
 - et cetera.
 
-[How to setup tomcat to host multiple instances?]()
+[How to setup tomcat to host multiple instances?](https://github.com/bhochhi/apache-tomcat-guide/wiki/How-to-setup-tomcat-to-host-multiple-instances%3F)
+-
 [Realm](https://github.com/bhochhi/apache-tomcat-guide/wiki/w)
 -
 [How to integrate LDAP with Tomcat 7.](https://github.com/bhochhi/apache-tomcat-guide/wiki/How-to-integrate-LDAP-with-Tomcat%3F)
