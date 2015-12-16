@@ -9,7 +9,7 @@ I want to document this to keep the good understanding of
 - How tomcat versioning syncs with java version and other specifications
 - et cetera.
 
-[What is realm](https://github.com/bhochhi/apache-tomcat-guide/wiki/w)
+[Realm](https://github.com/bhochhi/apache-tomcat-guide/wiki/w)
 -
 [How to integrate LDAP with Tomcat 7.](https://github.com/bhochhi/apache-tomcat-guide/wiki/How-to-integrate-LDAP-with-Tomcat%3F)
 --
